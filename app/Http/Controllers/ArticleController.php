@@ -53,8 +53,8 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->text = $request->text;
         $res = $article->save();
-        var_dump($res);
-        return redirect('/');
+
+        return redirect()->route('article.index');
     }
 
     /**
@@ -129,7 +129,7 @@ class ArticleController extends Controller
             session()->flash('message', "ошибка удаления записи $id");
         }
 
-        return redirect('/');
+        return redirect()->route('article.index');
 
     }
 }
