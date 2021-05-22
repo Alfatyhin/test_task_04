@@ -49,6 +49,11 @@ class ArticleController extends Controller
      */
     public function save(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'text' => 'required',
+        ]);
+
         $article = new Article();
         $article->title = $request->title;
         $article->text = $request->text;
@@ -94,6 +99,12 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         if ($request->save) {
+
+            $this->validate($request, [
+                'title' => 'required',
+                'text' => 'required',
+            ]);
+
             $article->title = $request->title;
             $article->text = $request->text;
             $res = $article->save();
@@ -102,6 +113,7 @@ class ArticleController extends Controller
             } else {
                 $message = "Запись $article->id не обновлена";
             }
+            
         } else {
             $message = false;
         }
