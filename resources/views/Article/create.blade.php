@@ -14,19 +14,20 @@
             @csrf
             <p > Название статьи: <br>
                 <input class="title" type="text" name="title"  />
+            </p>
             @if ($errors->has('title'))
                 <div class="alert alert-danger">{{$errors->first('title')}}</div>
-                @endif
-                </p>
+            @endif
 
-                <p>Текст статьи: <br>
-                    <textarea name="text"></textarea>
-                @if ($errors->has('article'))
-                    <div class="alert alert-danger"></div>
-                    @endif
-                    </p>
+            <p>Текст статьи: <br>
+                <textarea name="text"></textarea>
+            </p>
+            @if ($errors->has('text'))
+                <div class="alert alert-danger"></div>
+            @endif
 
-                    <input type="submit" name="save" value="сохранить">
+
+             <input type="submit" name="save" value="сохранить">
         </form>
     </div>
 
