@@ -11,6 +11,13 @@ h1 {
 .links a {
     margin-right: 20px;
 }
+.links {
+    margin: 20px 0;
+}
+.button {
+    padding: 5px 10px;
+    border: 1px solid #bbbbbb;
+}
 .text_formated {
     white-space: pre-wrap;
 }
@@ -19,11 +26,14 @@ input.title {
     min-width: 600px;
 }
 textarea {
-    width: 50%;
+    width: 100%;
     min-width: 600px;
-    height: 30vw;
+    height: 60vh;
     border: 1px solid #ccc;
 }
+
+
+
 @media (max-width: 700px) {
 
     input.title {
@@ -32,7 +42,6 @@ textarea {
 
     textarea {
         min-width: 100%;
-        height: 50vh;
     }
 }
 
