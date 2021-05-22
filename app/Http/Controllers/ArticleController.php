@@ -113,7 +113,7 @@ class ArticleController extends Controller
             } else {
                 $message = "Запись $article->id не обновлена";
             }
-            
+
         } else {
             $message = false;
         }
